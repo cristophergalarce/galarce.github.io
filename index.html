@@ -18,7 +18,7 @@ Cristoph Galarchenko.
 	<meta charset="UTF-8">
 	<meta name="description" content="Por lo más noble de cada obra. elalquimista es diseñador gráfico ubicado en Santiago de Chile.">
 	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" />
-	<title>Diseño Gráfico, Branding & Web</title>
+	<title>Diseño Gráfico, Branding y Web</title>
 	<link rel="shortcut icon" href="img/favicon.ico" />
 </head>
 <body>
@@ -26,7 +26,7 @@ Cristoph Galarchenko.
 		<img src="img/logo_elalquimistapro.png" alt="Logo elalquimista.pro" />
 	</figure>
 	<h1 class="titulo text-center">
-		Diseño Gráfico, Branding & Web
+		Diseño Gráfico, Branding y Web
 	</h1>
 	<p class="contactos text-center">
 		<a class="telefono" href="tel:+560986680230">
@@ -70,18 +70,14 @@ Cristoph Galarchenko.
 	<script src="lib/jquery-1.11.3.js" ></script>
 	<!-- Este script para el bello smooth scroll -->
 	<script>
-		$('.conexion.right').on('click', function(event){
-
-	    	var target = $('.formulario');
-
-		    if(target.length) {
-		        event.preventDefault();
-
-		        $('html, body').animate({
-		            scrollTop: target.offset().top
-		        	}, 500);
-		    	}
-		});
+		$(function(){
+			$('.conexion.right').click(function(n){
+				n.preventDefault();
+				$('body').animate({
+					scrollTop: $('.formulario').offset().top
+				}, 500);
+			});
+		});		
 	</script>
 </body>
 </html>
