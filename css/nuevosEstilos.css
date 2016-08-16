@@ -315,15 +315,14 @@ body {
 }
 .formulario .input {
   background: transparent;
-  border: 1px solid #5a5a5a;
-  -webkit-border-radius: 0.2em;
-  border-radius: 0.2em;
+  border: none;
+  border-bottom: 1px solid #5a5a5a;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   display: block;
   margin-bottom: 1em;
-  outline: 0;
+  outline: none;
   padding: 0.7em;
   width: 100%;
 }
@@ -343,6 +342,10 @@ body {
   color: #5a5a5a;
   font-style: italic;
 }
+.formulario .input:focus {
+  border: none;
+  border-bottom: 1px solid #cca276;
+}
 .formulario .botonInput {
   background: transparent;
   border: 1px solid #cca276;
@@ -352,6 +355,7 @@ body {
   color: #cca276;
   outline: 0;
   padding: 0.5em 3em;
+  width: 100%;
 }
 .formulario .botonInput:hover {
   background: #cca276;
@@ -380,6 +384,9 @@ body {
 }
 .right {
   float: right;
+}
+::selection {
+  background: #1e1e1e;
 }
 @media (min-width: 600px) {
   body {
