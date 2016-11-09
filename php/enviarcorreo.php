@@ -1,5 +1,5 @@
 <?php
-$para = 'cristophergalarce@gmail.com';
+$para = 'cristoph.galarchenko@gmail.com';
 $asunto = 'Contacto desde elalquimista.pro';
 
 $nombre = $_POST['nombre'];
@@ -24,4 +24,3 @@ window.location.href = '../';
 </script>";
 }
 }
-?>
