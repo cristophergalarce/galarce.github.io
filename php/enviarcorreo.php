@@ -2,16 +2,16 @@
 $para = 'cristoph.galarchenko@gmail.com';
 $asunto = 'Contacto desde elalquimista.pro';
 
-$nombre = $_POST['nombre'];
-$email = $_POST['email'];
-$mensaje = $_POST['mensaje'];
+$nombre = $_REQUEST['nombre'];
+$email = $_REQUEST['email'];
+$mensaje = $_REQUEST['mensaje'];
 
 $msjCorreo = "Nombre: $nombre\n\nE-Mail: $email\n\nMensaje:\n$mensaje";
 
 $cabecera = 'From: '.$nombre.' <'.$email.'>'."\r\n".
 			'Reply-To: '.$email."\r\n";
 
-if ($_POST['submit']){
+if (isset($_REQUEST['submit'])){
 	if (@mail($para, $asunto, $msjCorreo, $cabecera)){
 		echo "<script language='javascript'>
 		alert('Correo enviado :) Dame un dia para responderte.');
@@ -24,3 +24,4 @@ if ($_POST['submit']){
 		</script>";
 	}
 }
+?>
