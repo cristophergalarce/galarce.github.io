@@ -12,7 +12,7 @@ $cabecera = 'From: '.$nombre.' <'.$email.'>'."\r\n".
 			'Reply-To: '.$email."\r\n";
 
 if ($_POST['submit']){
-	if (@mail($para, $asunto, $msjCorreo, $cabecera)){
+	if (mail($para, $asunto, $msjCorreo, $cabecera)){
 		echo "<script language='javascript'>
 		alert('Correo enviado :) Dame un dia para responderte.');
 		window.location.href = '../';
