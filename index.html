@@ -47,7 +47,7 @@ Cristoph Galarchenko
 		<nav class="conexion right">
 			<figure class="conexion-soporte">
 			</figure>
-			<a class="conexion-link scroll" href="">
+			<a class="conexion-link" id="scroll" href="">
 				coordinemos<br />una reunión
 			</a>
 		</nav>
@@ -75,11 +75,9 @@ Cristoph Galarchenko
 	<script>
 		// Aprendi como hacerlo desde 0 soy feliz
 		$(function(){
-			$('.scroll').click(function(f){
+			$('#scroll').click(function(f){
 				f.preventDefault();
-				$('body').animate({
-					scrollTop: $('.formulario').offset().top
-				}, 500);
+				$('html, body').animate({scrollTop: $('.formulario').offset().top}, 500);
 			});
 		});		
 	</script>
