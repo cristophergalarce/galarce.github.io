@@ -1,0 +1,229 @@
+@import normalize
+@import fonts
+
+// VARIABLES
+
+$azul-marino: hsla(207, 18%, 20%, 1)
+$celeste: hsla(207, 100%, 63%, 1)
+$celeste-claro: hsla(207, 100%, 70%, 1)
+$gris: hsla(207, 36%, 76%, 1)
+$blanco: hsla(0, 100%, 100%, 1)
+$font: 'CircularStd', sans-serif
+$font-size: 20px
+$black: 800
+$bold: 600
+$medium: 500
+$book: 400
+
+
+// MIXINS
+=flex-between
+	display: flex
+	justify-content: space-between
+
+=flex-normal
+	display: flex
+
+=transition
+	transition: .5s
+
+// GENERALES
+a
+	text-decoration: none
+body
+	color: $azul-marino
+	font-family: $font
+	font-size: $font-size
+	padding: 0
+li
+	display: inline-block
+ul, figure, p, h1
+	margin: 0
+	padding: 0
+
+// OOCSS
+.avatar
+	background: url(../img/avatar.jpg) no-repeat top -25px right -130px/110% auto
+.content
+	width: 80%
+	height: auto
+	margin: 0 auto
+	max-width: 960px
+.mainHeader
+	width: 100%
+	height: auto
+	margin: 40px auto 0 auto
+	+flex-between
+.redes
+	width: 110px
+	height: auto
+	+flex-between
+.mainMenu
+	display: none
+.contentMain
+	width: 100%
+	height: auto
+	margin-top: 60%
+.name
+	font-size: .7em
+.title
+	font-size: 1.25em
+	line-height: 1.09
+	letter-spacing: -2.5px
+	margin-top: .5em
+.beta
+	font-size: 0.4em
+	font-style: italic
+	font-weight: $book
+	letter-spacing: normal
+.textCeleste
+	color: $celeste
+.textGris
+	color: $gris
+.description
+	font-size: .7em
+	line-height: 1.8
+	width: 100%
+	margin-top: .5em
+.buttonsMain
+	margin-top: 1em
+.buttonCta
+	margin: 0 auto
+	text-align: center
+	a
+		background-color: $celeste
+		border-radius: 2em
+		display: block
+		color: $blanco
+		padding: 1.2em 3em
+		font-size: .8em
+		font-weight: $medium
+		&:hover
+			+transition
+			background-color: $celeste-claro
+.buttonSecondary
+	margin: 0 auto
+	text-align: center
+	margin-top: .3em
+	a
+		display: block
+		color: $gris
+		font-size: .7em
+		padding: .5em .5em
+.arrow
+	background: url(../img/arrow-forward-material.svg) no-repeat center center/auto
+	margin: 0 auto
+	width: 2em
+	height: 2em
+	border-radius: 50%
+	a
+		display: block
+		width: 100%
+		height: 100%
+
+
+// MEDIAQUERIES
+//min es desde
+//max es hasta
+@media (min-width: 320px)
+	.avatar
+		background: url(../img/avatar.jpg) no-repeat top -20px right -120px/100% auto
+	.mainHeader
+		margin: 40px auto 0 auto
+	.contentMain
+		margin-top: 60%
+	.name
+		font-size: .7em
+	.title
+		font-size: 1.2em
+	.description
+		font-size: .7em
+		width: 95%
+	.buttonCta
+		a
+			font-size: .8em
+	.buttonSecondary
+		a	
+			font-size: .7em
+	.arrow
+		margin: .1em auto 0 auto
+@media (min-width: 375px)
+	.avatar
+		background: url(../img/avatar.jpg) no-repeat top 40px right -100px/90% auto
+	.contentMain
+		margin-top: 75%
+	.name
+		font-size: .8em
+	.title
+		font-size: 1.4em
+	.description
+		width: 90%
+		font-size: .8em
+@media (min-width: 400px)
+	.avatar
+		background: url(../img/avatar.jpg) no-repeat top 40px right -120px/80% auto
+	.contentMain
+		margin-top: 50%
+	.description
+		width: 70%
+@media (min-width: 600px)
+	.avatar
+		background: url(../img/avatar.jpg) no-repeat top 40px right -120px/70% auto
+	.contentMain
+		margin-top: 30%
+	.title
+		width: 80%
+	.description
+		width: 60%
+@media (min-width: 800px)
+	.avatar
+		background: url(../img/avatar.jpg) no-repeat top 40px right -120px/60% auto
+	.contentMain
+		margin-top: 20%
+	.title
+		width: 70%
+	.description
+		width: 50%
+	.buttonCta
+		width: 50%
+		margin-top: 3em
+@media (min-width: 900px)
+	.avatar
+		background: url(../img/avatar.jpg) no-repeat top 40px right -120px/70% auto
+	.mainHeader
+		margin: 50px auto 0 auto
+	.contentMain
+		margin-top: 20%
+		display: flex
+		flex-direction: row
+		flex-wrap: wrap
+	.name
+		margin-top: 2.3em
+		margin-right: 3em
+		flex-grow: 50%
+		font-size: .7em
+	.title
+		font-size: 1.6em
+		width: 80%
+		order: -1
+		flex-grow: 100%
+	.description
+		font-size: 1em
+		margin-top: 1em
+	.mainMenu
+		display: block
+		ul
+			li:last-child
+				a
+					color: $celeste	
+		a
+			display: block
+			padding: .5em 1em
+			font-size: .6em
+			text-transform: uppercase
+			font-weight: bold
+			letter-spacing: .5px
+			color: $azul-marino
+			&:hover
+				color: $celeste
+				+transition
