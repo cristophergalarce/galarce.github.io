@@ -509,7 +509,6 @@ html {
     font-size: 1.4em; }
 
   .description {
-    width: 90%;
     font-size: 0.8em; } }
 @media (min-width: 400px) {
   .avatar {
