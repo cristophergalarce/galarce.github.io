@@ -6,7 +6,7 @@
 $azul-marino: hsla(207, 18%, 20%, 1)
 $celeste: hsla(207, 100%, 63%, 1)
 $celeste-claro: hsla(207, 100%, 70%, 1)
-$gris: hsla(207, 36%, 76%, 1)
+$gray: hsla(207, 36%, 76%, 1)
 $blanco: hsla(0, 100%, 100%, 1)
 $font: 'CircularStd', sans-serif
 $font-size: 20px
@@ -21,7 +21,7 @@ $book: 400
 	display: flex
 	justify-content: space-between
 
-=flex-normal
+=flex
 	display: flex
 
 =transition
@@ -40,6 +40,8 @@ li
 ul, figure, p, h1
 	margin: 0
 	padding: 0
+html
+	+transition
 
 // OOCSS
 .avatar
@@ -54,7 +56,7 @@ ul, figure, p, h1
 	height: auto
 	margin: 40px auto 0 auto
 	+flex-between
-.redes
+.profiles
 	width: 110px
 	height: auto
 	+flex-between
@@ -78,8 +80,8 @@ ul, figure, p, h1
 	letter-spacing: normal
 .textCeleste
 	color: $celeste
-.textGris
-	color: $gris
+.textGray
+	color: $gray
 .description
 	font-size: .7em
 	line-height: 1.8
@@ -107,7 +109,7 @@ ul, figure, p, h1
 	margin-top: .3em
 	a
 		display: block
-		color: $gris
+		color: $gray
 		font-size: .7em
 		padding: .5em .5em
 .arrow
@@ -184,32 +186,23 @@ ul, figure, p, h1
 		width: 70%
 	.description
 		width: 50%
-	.buttonCta
+	.buttonMain
 		width: 50%
 		margin-top: 3em
 @media (min-width: 900px)
 	.avatar
-		background: url(../img/avatar.jpg) no-repeat top 40px right -120px/70% auto
+		background: url(../img/avatar.jpg) no-repeat top 60px right -20px/50% auto
 	.mainHeader
 		margin: 50px auto 0 auto
 	.contentMain
-		margin-top: 20%
-		display: flex
-		flex-direction: row
-		flex-wrap: wrap
+		margin-top: 25%
 	.name
-		margin-top: 2.3em
-		margin-right: 3em
-		flex-grow: 50%
-		font-size: .7em
+		font-size: .8em
 	.title
-		font-size: 1.6em
-		width: 80%
-		order: -1
-		flex-grow: 100%
+		font-size: 1.4em
 	.description
 		font-size: 1em
-		margin-top: 1em
+		width: 40%
 	.mainMenu
 		display: block
 		ul
@@ -227,3 +220,20 @@ ul, figure, p, h1
 			&:hover
 				color: $celeste
 				+transition
+	.buttonsMain
+		width: 50%
+		+flex 
+	.buttonCta
+		margin: 0
+	.buttonSecondary
+		margin: 0
+		margin-left: 1em
+		width: 20%
+		text-align: left
+		+flex
+		flex-direction: column
+		justify-content: center
+		a
+			padding: 0
+	.arrow
+		margin: 2em auto 0 auto

@@ -1,2 +1,2 @@
-# elalquimistapro
-Repo de mi portafolio elalquimista.pro
+# galarchenko.pro
+Repo of my portfolio galarchenko.pro

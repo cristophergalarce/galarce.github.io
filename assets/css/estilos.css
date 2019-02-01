@@ -368,6 +368,9 @@ ul, figure, p, h1 {
   margin: 0;
   padding: 0; }
 
+html {
+  transition: 0.5s; }
+
 .avatar {
   background: url(../img/avatar.jpg) no-repeat top -25px right -130px/110% auto; }
 
@@ -384,7 +387,7 @@ ul, figure, p, h1 {
   display: flex;
   justify-content: space-between; }
 
-.redes {
+.profiles {
   width: 110px;
   height: auto;
   display: flex;
@@ -416,7 +419,7 @@ ul, figure, p, h1 {
 .textCeleste {
   color: #42aaff; }
 
-.textGris {
+.textGray {
   color: #acc4d8; }
 
 .description {
@@ -542,37 +545,28 @@ ul, figure, p, h1 {
   .description {
     width: 50%; }
 
-  .buttonCta {
+  .buttonMain {
     width: 50%;
     margin-top: 3em; } }
 @media (min-width: 900px) {
   .avatar {
-    background: url(../img/avatar.jpg) no-repeat top 40px right -120px/70% auto; }
+    background: url(../img/avatar.jpg) no-repeat top 60px right -20px/50% auto; }
 
   .mainHeader {
     margin: 50px auto 0 auto; }
 
   .contentMain {
-    margin-top: 20%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap; }
+    margin-top: 25%; }
 
   .name {
-    margin-top: 2.3em;
-    margin-right: 3em;
-    flex-grow: 50%;
-    font-size: 0.7em; }
+    font-size: 0.8em; }
 
   .title {
-    font-size: 1.6em;
-    width: 80%;
-    order: -1;
-    flex-grow: 100%; }
+    font-size: 1.4em; }
 
   .description {
     font-size: 1em;
-    margin-top: 1em; }
+    width: 40%; }
 
   .mainMenu {
     display: block; }
@@ -588,6 +582,27 @@ ul, figure, p, h1 {
       color: #2a343c; }
       .mainMenu a:hover {
         color: #42aaff;
-        transition: 0.5s; } }
+        transition: 0.5s; }
+
+  .buttonsMain {
+    width: 50%;
+    display: flex; }
+
+  .buttonCta {
+    margin: 0; }
+
+  .buttonSecondary {
+    margin: 0;
+    margin-left: 1em;
+    width: 20%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .buttonSecondary a {
+      padding: 0; }
+
+  .arrow {
+    margin: 2em auto 0 auto; } }
 
 /*# sourceMappingURL=estilos.css.map */
