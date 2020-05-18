@@ -1,2 +1,2 @@
-# galarchenko.pro
-Repo of my portfolio galarchenko.pro
+# galarce.pro
+Repo of my portfolio galarce.pro
