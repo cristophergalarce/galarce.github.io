@@ -1,5 +1,5 @@
 <?php
-$para = 'cristoph.galarchenko@gmail.com';
+$para = 'crstphx@gmail.com';
 $asunto = 'Contacto desde el portfolio';
 
 $nombre = $_POST['nombre'];
