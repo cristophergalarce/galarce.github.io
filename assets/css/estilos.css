@@ -5,6 +5,8 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+@import 'https://use.typekit.net/yko7fhe.css';
+@import 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap';
 html {
   line-height: 1.15;
   /* 1 */
@@ -337,76 +339,21 @@ template {
   display: none;
 }
 
-/* CircularStd @font-face kit */
-@font-face {
-  font-family: "CircularStd";
-  src: url("../fonts/CircularStd-Black.eot");
-  src: url("../fonts/CircularStd-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/CircularStd-Black.woff") format("woff"), url("../fonts/CircularStd-Black.ttf") format("truetype"), url("../fonts/CircularStd-Black.svg#bcc26993292869431e54c666aafa8fcd") format("svg");
-  font-weight: 800;
-  font-style: normal;
-}
-@font-face {
-  font-family: "CircularStd";
-  src: url("../fonts/CircularStd-BlackItalic.eot");
-  src: url("../fonts/CircularStd-BlackItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/CircularStd-BlackItalic.woff") format("woff"), url("../fonts/CircularStd-BlackItalic.ttf") format("truetype"), url("../fonts/CircularStd-BlackItalic.svg#bcc26993292869431e54c666aafa8fcd") format("svg");
-  font-weight: 800;
-  font-style: italic;
-}
-@font-face {
-  font-family: "CircularStd";
-  src: url("../fonts/CircularStd-Bold.eot");
-  src: url("../fonts/CircularStd-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/CircularStd-Bold.woff") format("woff"), url("../fonts/CircularStd-Bold.ttf") format("truetype"), url("../fonts/CircularStd-Bold.svg#bcc26993292869431e54c666aafa8fcd") format("svg");
-  font-weight: 600;
-  font-style: normal;
-}
-@font-face {
-  font-family: "CircularStd";
-  src: url("../fonts/CircularStd-BoldItalic.eot");
-  src: url("../fonts/CircularStd-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/CircularStd-BoldItalic.woff") format("woff"), url("../fonts/CircularStd-BoldItalic.ttf") format("truetype"), url("../fonts/CircularStd-BoldItalic.svg#bcc26993292869431e54c666aafa8fcd") format("svg");
-  font-weight: 600;
-  font-style: italic;
-}
-@font-face {
-  font-family: "CircularStd";
-  src: url("../fonts/CircularStd-Medium.eot");
-  src: url("../fonts/CircularStd-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/CircularStd-Medium.woff") format("woff"), url("../fonts/CircularStd-Medium.ttf") format("truetype"), url("../fonts/CircularStd-Medium.svg#bcc26993292869431e54c666aafa8fcd") format("svg");
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: "CircularStd";
-  src: url("../fonts/CircularStd-MediumItalic.eot");
-  src: url("../fonts/CircularStd-MediumItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/CircularStd-MediumItalic.woff") format("woff"), url("../fonts/CircularStd-MediumItalic.ttf") format("truetype"), url("../fonts/CircularStd-MediumItalic.svg#bcc26993292869431e54c666aafa8fcd") format("svg");
-  font-weight: 500;
-  font-style: italic;
-}
-@font-face {
-  font-family: "CircularStd";
-  src: url("../fonts/CircularStd-Book.eot");
-  src: url("../fonts/CircularStd-Book.eot?#iefix") format("embedded-opentype"), url("../fonts/CircularStd-Book.woff") format("woff"), url("../fonts/CircularStd-Book.ttf") format("truetype"), url("../fonts/CircularStd-Book.svg#bcc26993292869431e54c666aafa8fcd") format("svg");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "CircularStd";
-  src: url("../fonts/CircularStd-BookItalic.eot");
-  src: url("../fonts/CircularStd-BookItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/CircularStd-BookItalic.woff") format("woff"), url("../fonts/CircularStd-BookItalic.ttf") format("truetype"), url("../fonts/CircularStd-BookItalic.svg#bcc26993292869431e54c666aafa8fcd") format("svg");
-  font-weight: 400;
-  font-style: italic;
-}
-a {
-  text-decoration: none;
+/* Url de la hoja de estilos de fuente Garamond obtenida en Adobe para el proyecto propio (id=yko7fhe) */
+/* La fuente Garamond ya tiene el estilo font-weight configurado en 600 y font-style en italic */
+html {
+  transition: 0.5s;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  color: #1d262b;
+  background-color: #fcfcfd;
 }
 
 body {
-  color: #2a343c;
-  font-family: "CircularStd", sans-serif;
-  font-size: 20px;
   padding: 0;
-}
-
-li {
-  display: inline-block;
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1152px;
 }
 
 ul, figure, p, h1 {
@@ -414,59 +361,73 @@ ul, figure, p, h1 {
   padding: 0;
 }
 
-html {
+li {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+}
+
+.Header-Main {
+  width: 90%;
+  height: auto;
+  margin: 4em auto 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.Menu-Main a {
+  display: block;
+  padding: 0.5em 1em;
+  font-size: 0.6em;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  color: #1d262b;
+}
+.Menu-Main a:hover {
+  color: #42aaff;
   transition: 0.5s;
 }
 
-.avatar {
-  background: url(../img/avatar.jpg) no-repeat top -25px right -130px/110% auto;
-}
-
-.content {
-  width: 80%;
+.Wrapper-Hero {
+  margin-top: 6em;
   height: auto;
-  margin: 0 auto;
-  max-width: 960px;
-}
-
-.mainHeader {
   width: 100%;
+}
+
+.Image-Hero {
+  background: url(../img/Image-Hero@2x.png) top right/577px 483px no-repeat;
+}
+
+.Content-Hero {
+  width: 55%;
   height: auto;
-  margin: 40px auto 0 auto;
-  display: flex;
-  justify-content: space-between;
+  padding-top: 2em;
+  padding-bottom: 7.5em;
+  padding-left: 5em;
 }
 
-.profiles {
-  width: 110px;
-  height: auto;
-  display: flex;
-  justify-content: space-between;
+.Title-Hero {
+  font-size: 3.6rem;
+  line-height: 1.5;
+  letter-spacing: -0.04em;
 }
 
-.mainMenu {
-  display: none;
+.Description-Hero {
+  font-size: 1.5rem;
+  line-height: 2;
+  margin-top: 1em;
+  font-weight: 400;
 }
 
-.contentMain {
-  width: 100%;
-  height: auto;
-  margin-top: 60%;
-}
-
-.name {
-  font-size: 0.7em;
-}
-
-.title {
-  font-size: 1.25em;
-  line-height: 1.09;
-  letter-spacing: -2.5px;
-  margin-top: 0.5em;
+.old {
+  font-family: "adobe-garamond-pro", serif;
 }
 
 .beta {
-  font-size: 0.4em;
+  font-size: 1.5rem;
   font-style: italic;
   font-weight: 400;
   letter-spacing: normal;
@@ -477,48 +438,41 @@ html {
 }
 
 .textGray {
-  color: #acc4d8;
+  color: #b6c9d8;
 }
 
-.description {
-  font-size: 0.7em;
-  line-height: 1.8;
-  width: 100%;
-  margin-top: 0.5em;
+.Buttons-Hero {
+  margin-top: 4.3em;
+  display: flex;
 }
 
-.buttonsMain {
-  margin-top: 1em;
-}
-
-.buttonCta {
-  margin: 0 auto;
+.Button-Main {
   text-align: center;
 }
-.buttonCta a {
+.Button-Main a {
   background-color: #42aaff;
-  border-radius: 2em;
+  border-radius: 0.5em;
   display: block;
   color: white;
   padding: 1.2em 3em;
-  font-size: 0.8em;
-  font-weight: 500;
+  font-size: 1.3em;
+  font-weight: 600;
 }
-.buttonCta a:hover {
+.Button-Main a:hover {
   transition: 0.5s;
   background-color: #66baff;
 }
 
-.buttonSecondary {
-  margin: 0 auto;
+.Button-Ghost {
   text-align: center;
-  margin-top: 0.3em;
+  margin-left: 0.7em;
 }
-.buttonSecondary a {
+.Button-Ghost a {
   display: block;
-  color: #acc4d8;
-  font-size: 0.7em;
-  padding: 0.5em 0.5em;
+  color: #42aaff;
+  font-size: 1.3em;
+  font-weight: 600;
+  padding: 1.2em 1.5em;
 }
 
 .arrow {
@@ -534,185 +488,21 @@ html {
   height: 100%;
 }
 
-@media (min-width: 320px) {
-  .avatar {
-    background: url(../img/avatar.jpg) no-repeat top -20px right -120px/100% auto;
-  }
-
-  .mainHeader {
-    margin: 40px auto 0 auto;
-  }
-
-  .contentMain {
-    margin-top: 60%;
-  }
-
-  .name {
-    font-size: 0.7em;
-  }
-
-  .title {
-    font-size: 1.2em;
-  }
-
-  .description {
-    font-size: 0.7em;
-    width: 95%;
-  }
-
-  .buttonCta a {
-    font-size: 0.8em;
-  }
-
-  .buttonSecondary a {
-    font-size: 0.7em;
-  }
-
-  .arrow {
-    margin: 0.1em auto 0 auto;
-  }
+.Pill {
+  padding: 0.43em 1em;
+  background-color: #ecf5fe;
+  color: #42aaff;
+  border-radius: 2em;
 }
-@media (min-width: 375px) {
-  .avatar {
-    background: url(../img/avatar.jpg) no-repeat top 40px right -100px/90% auto;
-  }
-
-  .contentMain {
-    margin-top: 75%;
-  }
-
-  .name {
-    font-size: 0.8em;
-  }
-
-  .title {
-    font-size: 1.4em;
-  }
-
-  .description {
-    font-size: 0.8em;
-  }
+.Pill p {
+  font-size: 0.86em;
+  line-height: 1.3em;
 }
-@media (min-width: 400px) {
-  .avatar {
-    background: url(../img/avatar.jpg) no-repeat top 40px right -120px/80% auto;
-  }
 
-  .contentMain {
-    margin-top: 50%;
-  }
-
-  .description {
-    width: 70%;
-  }
-}
-@media (min-width: 600px) {
-  .avatar {
-    background: url(../img/avatar.jpg) no-repeat top 40px right -120px/70% auto;
-  }
-
-  .contentMain {
-    margin-top: 30%;
-  }
-
-  .title {
-    width: 80%;
-  }
-
-  .description {
-    width: 60%;
-  }
-}
-@media (min-width: 800px) {
-  .avatar {
-    background: url(../img/avatar.jpg) no-repeat top 40px right -120px/60% auto;
-  }
-
-  .contentMain {
-    margin-top: 20%;
-  }
-
-  .title {
-    width: 70%;
-  }
-
-  .description {
-    width: 50%;
-  }
-
-  .buttonMain {
-    width: 50%;
-    margin-top: 3em;
-  }
-}
-@media (min-width: 900px) {
-  .avatar {
-    background: url(../img/avatar.jpg) no-repeat top 60px right -20px/50% auto;
-  }
-
-  .mainHeader {
-    margin: 50px auto 0 auto;
-  }
-
-  .contentMain {
-    margin-top: 25%;
-  }
-
-  .name {
-    font-size: 0.8em;
-  }
-
-  .title {
-    font-size: 1.4em;
-  }
-
-  .description {
-    font-size: 1em;
-    width: 40%;
-  }
-
-  .mainMenu {
-    display: block;
-  }
-  .mainMenu a {
-    display: block;
-    padding: 0.5em 1em;
-    font-size: 0.6em;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 0.5px;
-    color: #2a343c;
-  }
-  .mainMenu a:hover {
-    color: #42aaff;
-    transition: 0.5s;
-  }
-
-  .buttonsMain {
-    width: 50%;
-    display: flex;
-  }
-
-  .buttonCta {
-    margin: 0;
-  }
-
-  .buttonSecondary {
-    margin: 0;
-    margin-left: 1em;
-    width: 20%;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .buttonSecondary a {
-    padding: 0;
-  }
-
-  .arrow {
-    margin: 2em auto 0 auto;
-  }
+.Logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.04em;
 }
 
 /*# sourceMappingURL=estilos.css.map */
