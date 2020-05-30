@@ -3,70 +3,59 @@
 Deploying with Netlify
 -->
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="description" content="Cristopher Galarce is the UX/UI Product Designer built for your agile scrum teams that will help to create better products for your users.">
-	<!-- Mobile behavior -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1, maximum-scale=1">
-	<title>The Product Designer | Cristopher Galarce</title>
-	<link rel="icon" href="assets/img/g-symbol.svg" type="image/svg">
-</head>
-<body class="Content">
-	<header class="Header-Main">
-		<!-- logo -->
-		<div class="Logo">
-			<a href="">Cristopher Galarce</a>
-		</div>
-		<div class="Pill">
-			<p>Now available</p>
-		</div>
-		<!-- menu -->
-		<nav class="Menu-Main">
-			<ul>
-				<li><a href="">Solutions</a></li>
-				<li><a href="">How it works</a></li>
-				<li><a href="">Features</a></li>
-			</ul>
-		</nav>
-	</header>
-	<!-- Title and description -->
-	<main class="Wrapper-Hero Image-Hero">
-		<div class="Content-Hero">
-			<h1 class="Title-Hero">
-				The <span class="old textCeleste">Designer</span> 👨🏻‍💻 for your agile scrum team <span class="beta textCeleste">v1.0</span>
-			</h1>
-			<p class="Description-Hero textGray">
-				Cristopher is your UX/UI Designer built for help you to create better products for your users.
-			</p>
-			<div class="Buttons-Hero">
-				<div class="Button-Main">
-					<a href="#">
-						Get it now <span>🙋🏻‍♂️</span>
-					</a>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="Cristopher Galarce is the UX/UI Product Designer built for your agile scrum teams that will help to create better products for your users.">
+		<!-- Mobile behavior -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<title>The Product Designer | Cristopher Galarce</title>
+		<link rel="icon" href="assets/img/g-symbol.svg" type="image/svg">
+	</head>
+	<body class="Image-Hero">
+		<header class="Header-Main">
+			<!-- logo -->
+			<div class="Wrapper-Logo">
+				<div class="Logo">
+					<a href="">Cristopher Galarce</a>
 				</div>
-				<div class="Button-Ghost">
-					<a href="#">
+				<div class="Pill-Sky">
+					<p>Now available</p>
+				</div>
+			</div>
+			<!-- menu -->
+			<nav class="Menu-Header">
+				<ul>
+					<li><a href="">Solutions</a></li>
+					<li><a href="">How it works</a></li>
+					<li><a href="">Features</a></li>
+					<li><a href="">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+		<!-- Title and description -->
+		<main class="Wrapper-Hero">
+			<div class="Content-Hero">
+				<h1 class="Title-Hero">
+					The <span class="Old-Style Text-Sky">Designer</span> 👨🏻‍💻 for your agile scrum team <span class="Beta-Note Text-Sky">v1.0</span>
+				</h1>
+				<p class="Description-Hero Text-Gray">
+					Cristopher is your UX/UI Designer built for help you to create better products for your users.
+				</p>
+				<div class="Buttons-Hero">
+					<a href="#" class="Button Button-Main">
+						Get it now 🙋🏻‍♂️
+					</a>
+					<a href="#" class="Button Button-Ghost">
 						Or schedule a free demo
 					</a>
 				</div>
 			</div>
-		</div>
-	</main>
-	
-	<!-- Link a la hoja de estilos -->
-	<link rel="stylesheet" href="assets/css/estilos.css">
-	<!-- Link a jquery en mi repo -->
-	<script src="assets/lib/jquery-1.11.3.js" ></script>
-	<!-- Este script para el bello smooth scroll
-		Debo llevarlo a un archivo .js vinculado -->
-	<script>
-		// Scroll Top
-		$(function(){
-			$('#scroll').click(function(f){
-				f.preventDefault();
-				$('html, body').animate({scrollTop: $('.formulario').offset().top}, 500);
-			});
-		});		
-	</script>
-</body>
+		</main>
+		
+		<!-- Link a la hoja de estilos -->
+		<link rel="stylesheet" href="assets/css/estilos.css">
+		<!-- Link a jquery en mi repo -->
+		<script src="assets/lib/jquery-1.11.3.js" ></script>
+		<script src="assets/js/scroll-top.js" ></script>
+	</body>
 </html>
