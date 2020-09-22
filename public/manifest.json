@@ -9,12 +9,12 @@
     },
     {
       "src": "G-symbol-ico.svg",
-      "type": "image/png",
+      "type": "image/x-icon",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
-      "type": "image/png",
+      "src": "G-symbol-ico.svg",
+      "type": "image/x-icon",
       "sizes": "512x512"
     }
   ],
