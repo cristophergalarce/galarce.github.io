@@ -1,0 +1,324 @@
+//	==========================================================================
+	Table of Contents
+
+//	0.	Imports
+	1.	Design Tokens
+	1.1	Colors
+	1.2 Fonts
+	1.3 Icons
+	1.4 Breakpoints
+	2.	Mixins
+	2.2	Animations
+	3.	General
+	4.	Components
+	4.1	Wrappers
+	4.2	Texts
+	4.3	Buttons
+	4.4	Pills
+	4.5	Images
+	9.	Utilities
+	10.	Footer
+	11.	Media Queries (Tablet)
+	12.	Media Queries (Mobile)
+	13.	Animations
+
+//	==========================================================================
+	0. Imports - The external complements for the project
+
+//	Garamond font from Adobe project (id=yko7fhe)
+@import 'https://use.typekit.net/yko7fhe.css'
+
+//	Poppins font from Google
+@import 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'
+
+//	Normalize browsers
+@import normalize
+
+//	==========================================================================
+	1. Design Tokens - Set up for atomic elements from design kit as variables
+
+//	1.1 Colors
+
+$Color-Dark: hsla(200, 20%, 14%, 1)
+$Color-Sky: hsla(207, 100%, 63%, 1)
+$Color-Sky-40: hsla(207, 100%, 70%, 1)
+$Color-Sky-10: hsla(208, 90%, 96%, 1)
+$Color-Gray-40: hsla(207, 31%, 78%, 1)
+$Color-Gray-10: hsla(210, 14%, 99%, 1)
+$Color-White: hsla(0, 100%, 100%, 1)
+
+//	1.2 Fonts
+
+$Font: 'Poppins', sans-serif
+//	Garamond already has font-weight: 600 & font-style: italic.
+$Font-Old: 'adobe-garamond-pro', serif
+$Font-Size-Base: 14px
+$Font-Black: 900
+$Font-Extrabold: 800
+$Font-Bold: 700
+$Font-Semibold: 600
+$Font-Medium: 500
+$Font-Regular: 400
+$Font-Light: 300
+$Size-16px: 1.15rem
+$Size-18px: 1.3rem
+$Size-20px: 1.5rem
+$Size-40px: 3rem
+$Size-30px: 2.5rem
+$Size-50px: 3.6rem
+$Size-12px: .86rem
+
+//	1.3 Icons
+
+//	1.4 Breakpoints - Sets mixins for different screen breakpoints for devices
+	min is from
+	max es to
+
+//	Smaller than 1140px (Tablet)
+=Breakpoint-1140px
+	@media ( max-width: 1140px )
+		@content
+
+//	Smaller than 1070px (Tablet)
+=Breakpoint-1070px
+	@media ( max-width: 1070px )
+		@content
+
+//	Smaller than 980px (Tablet)
+=Breakpoint-980px
+	@media ( max-width: 980px )
+		@content
+
+//	Smaller than 830px (Tablet)
+=Breakpoint-830px
+	@media ( max-width: 830px )
+		@content
+
+//	Smaller than 700px (Tablet)
+=Breakpoint-700px
+	@media ( max-width: 700px )
+		@content
+
+//	==========================================================================
+	2. Mixins - Utilitaries mixins for different cases and "ahorrar" code
+
+=flex-between
+	display: flex
+	justify-content: space-between
+
+=transition
+	transition: .5s
+
+//	==========================================================================
+	3. General - Setting up some base styles
+
+html
+	+transition
+	font-family: $Font
+	font-size: $Font-Size-Base
+	color: $Color-Dark
+	background-color: $Color-Gray-10
+	scroll-behavior: smooth
+	+Breakpoint-830px
+		font-size: 12px
+body
+	padding: 0
+	margin: 0 auto
+	max-width: 1140px
+ul, figure, p, h1
+	margin: 0
+	padding: 0
+a
+	text-decoration: none
+button
+	cursor: pointer
+	border-width: 0
+	border-style: none
+	border-color: transparent
+	box-sizing: content-box
+	&:focus
+		outline: none
+
+//	==========================================================================
+	4. Components
+
+//	4.1 Wrappers - Containers, groups and differents boxes in layouts
+
+.Header-Main
+	display: flex
+	align-items: center
+	justify-content: space-between
+	margin: 4em auto 0 auto
+	padding: 0 5em
+	+Breakpoint-980px
+		margin: 2em auto 0 auto
+		padding: 0 2em
+	+Breakpoint-700px
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+.Wrapper-Logo
+	display: flex
+	align-items: center
+	//	Selecciona a los elementos hijo excepto al primero. Funciona con flex
+	> * + *
+		margin-left: 1em
+.Menu-Header
+	ul
+		display: flex
+		//	Selecciona a los elementos hijo excepto al primero. Funciona con flex
+		> * + *
+			margin-left: 2em
+		li
+			display: inline-block
+			a
+				display: block
+				font-size: $Size-18px
+				font-weight: $Font-Regular
+				letter-spacing: -.04px
+				color: $Color-Gray-40
+				&:hover
+					color: $Color-Sky
+					+transition
+	+Breakpoint-700px
+		display: none
+.Wrapper-Hero
+	padding-top: 8em
+	padding-bottom: 20em
+	+Breakpoint-1070px
+		margin: 0 auto
+	+Breakpoint-980px
+		padding-top: 6em
+	+Breakpoint-700px
+		padding-top: 4em
+.Content-Hero
+	width: 37em
+	padding-left: 5em
+	+Breakpoint-1070px
+		width: 100%
+		margin: 0 auto
+		padding: 0
+		text-align: center
+.Buttons-Hero
+	margin-top: 4em
+	display: inline-block
+	//	Selecciona a los elementos hijo excepto al primero. Funciona con flex.
+	> * + *
+		margin-left: .7em
+	+Breakpoint-700px
+		display: flex
+		flex-direction: column
+		width: 70%
+		margin: 3em auto
+		//	Selecciona a los elementos hijo excepto al primero. Funciona con flex.
+		> * + *
+			margin-left: 0
+			margin-top: 1em
+
+//	4.2 Texts
+
+.Title-Hero
+	//	El h1 de normalize está multiplicando por 2em a $font-size 14px. Por lo que queda en 28px. Entonces el 28 se multiplica por 1.8em para dar 50,4px.
+	font-size: $Size-50px
+	line-height: 1.5
+	letter-spacing: -.04em
+	+Breakpoint-1070px
+		font-size: $Size-40px
+		padding: 0
+	+Breakpoint-980px
+		padding: 0 10rem
+	+Breakpoint-700px
+		font-size: $Size-30px
+		padding: 0 1rem
+		.Old-Style
+			font-style: italic
+.Description-Hero
+	font-size: $Size-20px
+	line-height: 2
+	margin-top: 1em
+	font-weight: $Font-Regular
+	+Breakpoint-1070px
+		padding: 0 14rem
+	+Breakpoint-980px
+		padding: 0 10rem
+	+Breakpoint-700px
+		padding: 0 4rem
+		font-size: $Size-16px
+.Beta-Note
+	font-size: $Size-20px
+	font-style: italic
+	font-weight: $Font-Regular
+	letter-spacing: normal
+.Logo
+	font-size: $Size-20px
+	font-weight: $Font-Semibold
+	letter-spacing: -.04em
+	a
+		color: $Color-Dark
+
+//	4.3 Buttons
+
+.Button
+	text-align: center
+	padding: 1.2rem 1rem
+	border-radius: .7rem
+	font-size: $Size-18px
+	font-weight: $Font-Semibold
+	&:hover
+		+transition
+	+Breakpoint-700px
+		padding: 1.8rem 1rem
+		font-size: $Size-18px
+.Button-Main
+	background-color: $Color-Sky
+	color: $Color-White
+	padding: 1.2rem 2.5rem
+	&:hover
+		background-color: $Color-Sky-40
+.Button-Ghost
+	background-color: $Color-White
+	color: $Color-Sky
+	padding: 1.2rem 1.5rem
+	&:hover
+		background-color: $Color-Sky-10
+
+//	4.4 Pills
+
+.Pill-Sky
+	padding: .5em 1em
+	background-color: $Color-Sky-10
+	color: $Color-Sky
+	border-radius: 2em
+	p
+		font-size: $Size-12px
+		line-height: 1.3
+
+//	4.5 Images
+
+.Image-Hero
+	background: url(../img/Image-Hero-portrait@2x--a.png) top 8em right / 577px 483px no-repeat
+	+Breakpoint-1140px
+		background: url(../img/Image-Hero-portrait@2x--b.png) top 10em right 3em / 510.1px 427px no-repeat
+	+Breakpoint-1070px
+		background: url(../img/Image-Hero-landscape@2x--a.png) top 30em center / 745.5px 364.76px no-repeat
+	+Breakpoint-980px
+		background: url(../img/Image-Hero-landscape@2x--a.png) top 32em center / 745.5px 364.76px no-repeat
+	+Breakpoint-700px
+		background: url(../img/Image-Hero-landscape@2x--a.png) top 33em center / 414.9px 203px no-repeat
+
+//	==========================================================================
+	5. Utilities - These things get used a lot
+
+.Text-Sky
+	color: $Color-Sky
+.Text-Gray
+	color: $Color-Gray-40
+.Old-Style
+	font-family: $Font-Old
+.favicon
+	fill: #fff
+	@media ( prefers-color-scheme: dark )
+		fill: #fff
+
+//	==========================================================================
+	4. Footer - The bottom of every page
