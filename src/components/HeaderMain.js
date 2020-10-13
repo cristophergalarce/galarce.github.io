@@ -46,7 +46,7 @@ class HeaderMain extends Component {
 							<IconSolidFile />
 						</a>
 					</figure>
-					<figure className='Icon-Link-Box Icon-Grey-to-Purp'>
+					<figure className='Icon-Link-Box Icon-Grey-to-Purp Hide'>
 						<a href='#top'>
 							<IconSolidMoon />
 						</a>
