@@ -1,14 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./style/main.css";
-import HeaderMain from "./layouts/HeaderMain";
-import Hero from "./layouts/Hero";
+import HeaderMain from "./components/HeaderMain";
+import Hero from "./components/Hero";
+import Space from "./components/Space";
 import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
 	<React.StrictMode>
 		<HeaderMain />
 		<Hero />
+		<Space />
 	</React.StrictMode>,
 	document.getElementById("root")
 );
