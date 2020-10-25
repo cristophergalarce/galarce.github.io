@@ -1,0 +1,23 @@
+=Icon-State-GreyPurp
+	a
+		> svg path
+			fill: $Color-Text-Body
+		&:hover > svg path
+			fill: $Color-Text-Hover
+.Icon-State-GreyPurp
+	+Icon-State-GreyPurp
+
+.Token-Icon-Box
+	width: 24px
+	height: 24px
+	a
+		display: block
+		width: 100%
+		height: 100%
+
+.Image-Hero
+	background: url(../img/Image-Hero-portrait@2x--a.png) top 8em right / 577px 483px no-repeat
+	+Breakpoint-Tablet
+		background: url(../img/Image-Hero-portrait@2x--b.png) top 10em right 3em / 510.1px 427px no-repeat
+.BackgroundHero-GradientTop
+	background: colors.$Gradient-Background-Light top center / 100% 555px no-repeat

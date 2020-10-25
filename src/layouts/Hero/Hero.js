@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import ButtonSide from "../components/ButtonSide";
-import ButtonMain from "../components/ButtonMain";
+import CtaSide from "../../components/Cta/CtaSide";
+import CtaMain from "../../components/Cta/CtaMain";
 
 class Hero extends Component {
 	render() {
@@ -8,7 +8,8 @@ class Hero extends Component {
 			<main className='Wrapper-Content-Hero'>
 				<div className='Wrapper-Texts-Hero'>
 					<h1 className='Title-Hero'>
-						<span className='Text-Gradient'>Delightful experiences </span>
+						{/*<span className='Text-Gradient'>*/}Delightful experiences
+						{/*</span>*/}
 						<br />
 						for your users
 					</h1>
@@ -18,8 +19,8 @@ class Hero extends Component {
 					</p>
 				</div>
 				<div className='Wrapper-Buttons-Hero'>
-					<ButtonMain label='Get it now' />
-					<ButtonSide label='Or book a free demo' />
+					<CtaMain label='Get it now' />
+					<CtaSide label='Or book a free demo' />
 				</div>
 			</main>
 		);

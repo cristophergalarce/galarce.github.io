@@ -1,0 +1,15 @@
+@use 'colors' as *
+@use 'global' as *
+
+.Background-Sea
+	background-image: $Color-Background-Base
+	background-blend-mode: multiply, normal
+.Background-Main
+	background-image: $Color-Background-Main
+	background-size: 100% 500px
+	background-repeat: no-repeat
+.Background-Blur
+	background-color: rgba($Color-Accent-White, .01)
+	backdrop-filter: blur(150px)
+	-webkit-backdrop-filter: blur(150px)
+	-moz-backdrop-filter: blur(150px)
