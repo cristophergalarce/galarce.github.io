@@ -1,0 +1,24 @@
+@use 'animations' as *
+
+//	==========================================================================
+	3. General - Setting up some base styles
+
+html
+	+transition
+	scroll-behavior: smooth
+body
+	padding: 0
+	margin: 0 auto
+ul, figure, p, h1
+	margin: 0
+	padding: 0
+a
+	text-decoration: none
+button
+	cursor: pointer
+	border-width: 0
+	border-style: none
+	border-color: transparent
+	box-sizing: content-box
+	&:focus
+		outline: none

@@ -338,29 +338,11 @@ template {
   display: none;
 }
 
-.Icon-Link-Box {
-  width: 24px;
-  height: 24px;
-}
-.Icon-Link-Box a {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-.Icon-Grey-to-Purp a > svg path {
-  fill: #5D87A8;
-}
-.Icon-Grey-to-Purp a:hover > svg path {
-  fill: #AF48FF;
-}
-
+/*	======================================================================================
+ * 2.	Mixins
+ * Utilitaries mixins for different cases and save code */
 html {
   transition: 0.5s;
-  font-family: "Poppins", sans-serif;
-  font-size: 14px;
-  color: #19192E;
-  background: #FBFBFC;
   scroll-behavior: smooth;
 }
 
@@ -389,36 +371,117 @@ button:focus {
   outline: none;
 }
 
-h1 {
-  font-size: 90px;
-  font-weight: 700;
-  font-style: normal;
-  line-height: 1.2em;
-  letter-spacing: -0.04em;
-}
-@media (max-width: 1024px) {
-  h1 {
-    font-size: 75px;
-  }
-}
-@media (max-width: 425px) {
-  h1 {
-    font-size: 50px;
-    line-height: 1.2em;
-  }
-}
-
-#root {
-  max-width: 1280px;
+.Layout {
   margin: 0 auto;
   padding: 0 40px;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  color: #19192E;
+  max-width: 1280px;
 }
 @media (max-width: 768px) {
-  #root {
+  .Layout {
     padding: 0 16px;
   }
 }
 
+.Hide {
+  display: none;
+}
+
+.Space {
+  height: 40px;
+}
+
+.Background-Sea {
+  background-image: -webkit-linear-gradient(0deg, #75DBFF 0%, #59FFEB 100%), -webkit-linear-gradient(225deg, #8CFFCC 0%, #695AF4 100%);
+  background-blend-mode: multiply, normal;
+}
+
+.Background-Main {
+  background-image: -webkit-linear-gradient(-75deg, #FF26B2 0%, #851BD9 64%, #3F0FFF 100%);
+  background-size: 100% 500px;
+  background-repeat: no-repeat;
+}
+
+.Background-Blur {
+  background-color: rgba(255, 255, 255, 0.01);
+  backdrop-filter: blur(150px);
+  -webkit-backdrop-filter: blur(150px);
+  -moz-backdrop-filter: blur(150px);
+}
+
+/*  ======================================================================================
+ *  1.  Design Tokens
+ *      Set up for atomic elements from design kit as variables */
+.Cta {
+  font-size: 18px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.5em;
+  text-align: center;
+  padding: 1.15rem 2.85rem;
+  border-radius: 0.7rem;
+}
+.Cta:hover {
+  transition: 0.5s;
+}
+.Cta-Main {
+  background: #FFFFFF;
+}
+.Cta-Main-Text {
+  background-image: -webkit-linear-gradient(-75deg, #FF26B2 0%, #851BD9 64%, #3F0FFF 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  box-decoration-break: clone;
+}
+.Cta-Side {
+  background: rgba(255, 255, 255, 0.1);
+}
+.Cta-Side-Text {
+  color: #FFFFFF;
+}
+.Cta-Side:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/*=Svg-State-White
+ * a
+ * > svg path
+ * fill: $Color-Accent-White-10
+ * &:hover > svg path
+ * fill: $Color-Accent-White-30 */
+.Icon-Scroll-Down {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 80px;
+}
+
+.Molecule-Button-Icon-Box {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  mask-image: url(../assets/Token/Box.svg);
+}
+.Molecule-Button-Icon-Box:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: 0.5s;
+}
+.Molecule-Button-Icon-Box a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.Molecule-Button-Icon-Box a > svg path {
+  fill: #FFFFFF;
+}
+
+/*.Icon-Box-State-White
+ * +Svg-State-White */
 .Header-Main {
   width: auto;
   display: grid;
@@ -454,10 +517,10 @@ h1 {
   font-weight: 300;
   font-style: normal;
   line-height: 1.5em;
-  color: #5D87A8;
+  color: rgba(255, 255, 255, 0.65);
 }
 .Nav-Main-Header ul li a:hover {
-  color: #AF48FF;
+  color: #FFFFFF;
   transition: 0.5s;
 }
 @media (max-width: 768px) {
@@ -468,9 +531,7 @@ h1 {
 
 .Wrapper-Icons-Header {
   display: grid;
-  grid-template-columns: auto auto;
   justify-content: end;
-  column-gap: 2.2em;
 }
 @media (max-width: 768px) {
   .Wrapper-Icons-Header {
@@ -478,37 +539,31 @@ h1 {
   }
 }
 
+.Pill-Sky {
+  padding: 0.5em 1em;
+  background-color: #F5EDFF;
+  color: #AF48FF;
+  border-radius: 2em;
+}
+.Pill-Sky p {
+  font-size: 0.86rem;
+  line-height: 1.3;
+}
+
 .Wrapper-Content-Hero {
   width: 100%;
-  margin-top: 5.15em;
+  padding: 4em 0;
   display: grid;
   grid-template-rows: auto auto;
-  row-gap: 4em;
+  row-gap: 40px;
   justify-items: center;
-}
-@media (max-width: 425px) {
-  .Wrapper-Content-Hero {
-    margin-top: 2em;
-  }
 }
 
 .Wrapper-Texts-Hero {
   text-align: center;
   display: grid;
   grid-template-rows: auto auto;
-  row-gap: 2.3em;
-}
-@media (max-width: 768px) {
-  .Wrapper-Texts-Hero {
-    width: 90%;
-  }
-}
-@media (max-width: 425px) {
-  .Wrapper-Texts-Hero {
-    width: 100%;
-    text-align: left;
-    row-gap: 1.5em;
-  }
+  row-gap: 16px;
 }
 
 .Wrapper-Buttons-Hero {
@@ -525,98 +580,59 @@ h1 {
   }
 }
 
-.Title-Hero .Text-Gradient {
-  background-image: -webkit-linear-gradient(-75deg, #FF26B2 0%, #851BD9 64%, #3F0FFF 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  box-decoration-break: clone;
+.Title-Hero {
+  color: #FFFFFF;
+  margin: 0 auto;
+  font-size: 90px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.15em;
+  letter-spacing: -0.04em;
+}
+@media (max-width: 1024px) {
+  .Title-Hero {
+    font-size: 75px;
+  }
+}
+@media (max-width: 425px) {
+  .Title-Hero {
+    font-size: 24px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1.15em;
+    letter-spacing: -0.04em;
+  }
 }
 
 .Description-Hero {
-  font-size: 20px;
+  max-width: 420px;
+  margin: 0 auto;
+  font-size: 18px;
   font-weight: 300;
   font-style: normal;
   line-height: 1.6em;
-  color: #5D87A8;
+  color: rgba(255, 255, 255, 0.65);
 }
-@media (max-width: 768px) {
+@media (max-width: 425px) {
   .Description-Hero {
-    margin: 0 auto;
+    max-width: 260px;
+    font-size: 14px;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1.6em;
   }
 }
 
-.Logo {
-  font-size: 20px;
-  font-weight: 500;
-  letter-spacing: -0.04em;
-}
-.Logo a {
-  color: #19192E;
-}
-
-.Button {
-  font-size: 18px;
-  font-weight: 500;
-  font-style: normal;
-  line-height: 1.5em;
-  text-align: center;
-  padding: 1.15rem 2.85rem;
-  border-radius: 0.7rem;
-}
-.Button:hover {
-  transition: 0.5s;
-}
-
-.Button-Main {
+.Title-Section .Text-Gradient {
   background-image: -webkit-linear-gradient(-75deg, #FF26B2 0%, #851BD9 64%, #3F0FFF 100%);
-  color: #FFFFFF;
-}
-
-.Button-Side {
-  background-color: #FFFFFF;
-}
-.Button-Side .Text {
-  background-image: -webkit-linear-gradient(-75deg, #FF26B2 0%, #851BD9 64%, #3F0FFF 100%);
-  -webkit-background-clip: text;
   background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
   box-decoration-break: clone;
 }
-.Button-Side:hover {
-  background-color: #F5EDFF;
-}
 
-.Pill-Sky {
-  padding: 0.5em 1em;
-  background-color: #ecf5fe;
-  color: #42aaff;
-  border-radius: 2em;
-}
-.Pill-Sky p {
-  font-size: 0.86rem;
-  line-height: 1.3;
-}
+/*	======================================================================================
+ * 2.	Normalize
+ * Normalize browsers */
 
-.Image-Hero {
-  background: url(../img/Image-Hero-portrait@2x--a.png) top 8em right/577px 483px no-repeat;
-}
-@media (max-width: 768px) {
-  .Image-Hero {
-    background: url(../img/Image-Hero-portrait@2x--b.png) top 10em right 3em/510.1px 427px no-repeat;
-  }
-}
-
-.BackgroundHero-GradientTop {
-  background: -webkit-linear-gradient(#F5EEFF 0%, rgba(255, 255, 255, 0) 100%) top center/100% 555px no-repeat;
-}
-
-.Hide {
-  display: none;
-}
-
-.Space {
-  height: 40px;
-}
-
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=bundle.css.map */

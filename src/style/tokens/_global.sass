@@ -1,0 +1,28 @@
+@use 'colors' as *
+@use 'fonts' as *
+@use 'mixins' as *
+@use 'breakpoints' as *
+
+$Color-Background-Base: $Gradient-Sea
+$Color-Background-Main: $Gradient-Main
+$Color-Background-Button-Main: $Color-Accent-White
+$Color-Background-Button-Side: $Color-Accent-White-10
+$Color-Text-Base: $Color-Dark-90
+$Color-Text-Body: $Color-Gray-60
+$Color-Text-Hover: $Color-Main-50
+
+.Layout
+	margin: 0 auto
+	padding: 0 40px
+	+Typography-Style
+	+Max-width-Desktop
+	+Breakpoint-Tablet
+		padding: 0 16px
+
+//	==========================================================================
+	5. Utilities - These things get used a lot
+
+.Hide
+	display: none
+.Space
+	height: 40px

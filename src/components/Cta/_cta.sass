@@ -1,0 +1,19 @@
+@use '../../style/tokens' as *
+
+.Cta
+	+Text-Style-Buttons
+	text-align: center
+	padding: 1.15rem 2.85rem
+	border-radius: .7rem
+	&:hover
+		+transition
+	&-Main
+		background: $Color-Accent-White
+		&-Text
+			+Text-Gradient-Main
+	&-Side
+		background: $Color-Accent-White-10
+		&-Text
+			color: $Color-Accent-White
+		&:hover
+			background: $Color-Accent-White-20

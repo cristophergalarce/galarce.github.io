@@ -1,0 +1,76 @@
+@use 'colors' as *
+@use 'breakpoints' as *
+
+//	Poppins font from Google
+@import 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'
+
+$Font: 'Poppins', sans-serif
+$Font-Size-Base: 14px
+$Font-Ultrablack: 900
+$Font-Black: 800
+$Font-Bold: 700
+$Font-Semibold: 500
+$Font-Medium: 400
+$Font-Regular: 300
+$Font-Light: 200
+$Font-Size-16px: 1.15rem
+$Font-Size-18px: 18px
+$Font-Size-20px: 20px
+$Font-Size-24px: 24px
+$Font-Size-40px: 3rem
+$Font-Size-30px: 2.5rem
+$Font-Size-50px: 3.6rem
+$Font-Size-12px: .86rem
+$Font-Size-90px: 90px
+
+=Typography-Style
+	font-family: $Font
+	font-size: $Font-Size-Base
+	color: $Color-Dark-90
+
+=Text-Style-H1
+	font-size: $Font-Size-90px
+	font-weight: $Font-Bold
+	font-style: normal
+	line-height: 1.15em
+	letter-spacing: -.04em
+	+Breakpoint-Laptop
+		font-size: 75px
+
+=Text-Style-H1-Small
+	font-size: $Font-Size-24px
+	font-weight: $Font-Bold
+	font-style: normal
+	line-height: 1.15em
+	letter-spacing: -.04em
+
+=Text-Style-Body
+	font-size: $Font-Size-18px
+	font-weight: $Font-Regular
+	font-style: normal
+	line-height: 1.6em
+
+=Text-Style-Body-Small
+	font-size: $Font-Size-Base
+	font-weight: $Font-Regular
+	font-style: normal
+	line-height: 1.6em
+
+=Text-Style-Buttons
+	font-size: $Font-Size-18px
+	font-weight: $Font-Semibold
+	font-style: normal
+	line-height: 1.5em
+
+=Text-Style-Menu
+	font-size: $Font-Size-18px
+	font-weight: $Font-Regular
+	font-style: normal
+	line-height: 1.5em
+
+=Text-Gradient-Main
+	background-image: $Gradient-Main
+	background-clip: text
+	-webkit-background-clip: text
+	color: transparent
+	box-decoration-break: clone // Fix the wrap text unexpect behavior on mobile
