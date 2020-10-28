@@ -4,24 +4,23 @@
 	width: 100%
 	padding: 4em 0 //14px
 	display: grid
-	grid-template-rows: auto auto
+	grid-auto-flow: row
 	row-gap: 40px
 	justify-items: center
 
 .Wrapper-Texts-Hero
 	text-align: center
 	display: grid
-	grid-template-rows: auto auto
+	grid-auto-flow: row
 	row-gap: 16px
 
 .Wrapper-Buttons-Hero
 	display: grid
-	grid-template-columns: auto auto
+	grid-auto-flow: column
 	column-gap: .75em
 	+Breakpoint-Mobile
 		width: 100%
-		grid-template-columns: none
-		grid-template-rows: auto auto
+		grid-auto-flow: row
 		row-gap: .75em
 
 .Title-Hero
@@ -39,7 +38,3 @@
 	+Breakpoint-Mobile
 		max-width: 260px
 		+Text-Style-Body-Small
-
-.Title-Section
-	.Text-Gradient
-		+Text-Gradient-Main

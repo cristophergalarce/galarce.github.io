@@ -8,15 +8,11 @@ class Hero extends Component {
 			<main className='Wrapper-Content-Hero'>
 				<div className='Wrapper-Texts-Hero'>
 					<h1 className='Title-Hero'>
-						{/*<span className='Text-Gradient'>*/}Delightful experiences
-						{/*</span>*/}
+						{this.props.h1FirstLine}
 						<br />
-						for your users
+						{this.props.h1SecondLine}
 					</h1>
-					<p className='Description-Hero'>
-						Cristopher Galarce is the product designer built for bring desirable
-						apps to life.
-					</p>
+					<p className='Description-Hero'>{this.props.description}</p>
 				</div>
 				<div className='Wrapper-Buttons-Hero'>
 					<CtaMain label='Get it now' />

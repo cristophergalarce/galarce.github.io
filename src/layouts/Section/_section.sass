@@ -1,0 +1,71 @@
+@use '../../style/tokens' as *
+
+.Section-Container
+	background-color: $Color-Main-05
+	display: grid
+	grid-auto-flow: row
+	row-gap: 120px
+	padding: 120px 0
+	border-radius: 40px 40px 0 0
+	+Breakpoint-Tablet
+		border-radius: 20px 20px 0 0
+		padding: 56px 0
+		row-gap: 56px
+
+.Wrapper-Texts-Section
+	text-align: center
+	display: grid
+	grid-auto-flow: row
+	row-gap: 16px
+
+.Title-Section
+	.Text-Gradient
+		+Text-Gradient-Main
+	margin: 0 auto
+	+Text-Style-H2
+	+Breakpoint-Mobile
+		+Text-Style-H2-Small
+
+.Description-Section
+	margin: 0 auto
+	+Text-Style-Body
+	color: $Color-Gray-60
+	+Breakpoint-Mobile
+		max-width: 260px
+		+Text-Style-Body-Small
+
+.Wrapper-Features
+	display: grid
+	grid-template-columns: repeat(auto-fill, minmax(324px, 1fr))
+	row-gap: 120px
+	justify-items: center
+	padding: 0 64px
+	+Breakpoint-Tablet
+		grid-template-columns: repeat(auto-fill, minmax(260px, 1fr))
+		row-gap: 56px
+		padding: 0
+	:nth-child(1) .Molecule-Icon-Box
+		background-color: #F0DCFF
+		> svg path
+			fill: #AF48FF
+	:nth-child(2) .Molecule-Icon-Box
+		background-color: #D7DEF7
+		> svg path
+			fill: #5460FE
+	:nth-child(3) .Molecule-Icon-Box
+		background-color: #FFEADE
+		> svg path
+			fill: #FF612F
+	:nth-child(4) .Molecule-Icon-Box
+		background-color: #FFE4E4
+		> svg path
+			fill: #FF3F3F
+	:nth-child(5) .Molecule-Icon-Box
+		background-color: #D8EDFF
+		> svg path
+			fill: #40AAFF
+	:nth-child(6) .Molecule-Icon-Box
+		background-color: #DDF3E6
+		> svg path
+			fill: #4CCC81
+
