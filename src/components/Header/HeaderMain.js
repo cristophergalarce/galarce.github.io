@@ -21,16 +21,16 @@ class HeaderMain extends Component {
 				<nav className='Nav-Main-Header'>
 					<ul>
 						<li className='Nav-Button'>
-							<a href='#top'>Discover</a>
+							<a href='#top'>{this.props.navMenu1}</a>
 						</li>
 						<li className='Nav-Button'>
-							<a href='#top'>How it works</a>
+							<a href='#top'>{this.props.navMenu2}</a>
 						</li>
 						<li className='Nav-Button'>
-							<a href='#top'>Features</a>
+							<a href='#top'>{this.props.navMenu3}</a>
 						</li>
 						<li className='Nav-Button'>
-							<a href='#top'>Contact</a>
+							<a href='#top'>{this.props.navMenu4}</a>
 						</li>
 					</ul>
 				</nav>

@@ -16,7 +16,7 @@
 	ul
 		height: 100%
 		display: grid
-		grid-template-columns: auto auto auto auto
+		grid-auto-flow: column
 		column-gap: 2.2em
 		li
 			display: inline-block
@@ -36,7 +36,7 @@
 
 .Wrapper-Icons-Header
 	display: grid
-	//grid-template-columns: auto auto //Descomentar cuando aparezca el segundo item
+	//grid-auto-flow: column //Descomentar cuando aparezca el segundo item
 	justify-content: end //Descubrí como cambia de items a content
 	//column-gap: 2.2em
 	+Breakpoint-Tablet

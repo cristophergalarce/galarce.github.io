@@ -19,7 +19,9 @@ $Font-Size-20px: 20px
 $Font-Size-24px: 24px
 $Font-Size-40px: 3rem
 $Font-Size-30px: 2.5rem
+$Font-Size-32px: 32px
 $Font-Size-50px: 3.6rem
+$Font-Size-64px: 64px
 $Font-Size-12px: .86rem
 $Font-Size-90px: 90px
 
@@ -36,9 +38,43 @@ $Font-Size-90px: 90px
 	letter-spacing: -.04em
 	+Breakpoint-Laptop
 		font-size: 75px
+	+Breakpoint-Tablet
+		font-size: 50px
 
 =Text-Style-H1-Small
 	font-size: $Font-Size-24px
+	font-weight: $Font-Bold
+	font-style: normal
+	line-height: 1.15em
+	letter-spacing: -.04em
+
+=Text-Style-H2
+	font-size: $Font-Size-64px
+	font-weight: $Font-Bold
+	font-style: normal
+	line-height: 1.15em
+	letter-spacing: -.04em
+	+Breakpoint-Laptop
+		font-size: 50px
+
+=Text-Style-H2-Small
+	font-size: $Font-Size-20px
+	font-weight: $Font-Bold
+	font-style: normal
+	line-height: 1.15em
+	letter-spacing: -.04em
+
+=Text-Style-Title
+	font-size: $Font-Size-32px
+	font-weight: $Font-Bold
+	font-style: normal
+	line-height: 1.15em
+	letter-spacing: -.04em
+	+Breakpoint-Laptop
+		font-size: 20px
+
+=Text-Style-Title-Small
+	font-size: $Font-Size-18px
 	font-weight: $Font-Bold
 	font-style: normal
 	line-height: 1.15em
@@ -58,6 +94,12 @@ $Font-Size-90px: 90px
 
 =Text-Style-Buttons
 	font-size: $Font-Size-18px
+	font-weight: $Font-Semibold
+	font-style: normal
+	line-height: 1.5em
+
+=Text-Style-Buttons-Small
+	font-size: $Font-Size-Base
 	font-weight: $Font-Semibold
 	font-style: normal
 	line-height: 1.5em
