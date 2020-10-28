@@ -1,0 +1,53 @@
+@use '../../style/tokens' as *
+
+.Feature-Big
+	width: 324px
+	display: grid
+	grid-auto-flow: column
+	column-gap: 24px
+	+Breakpoint-Tablet
+		grid-auto-flow: row
+		row-gap: 16px
+		justify-items: center
+
+.Molecule-Icon-Box
+	width: 70px
+	height: 70px
+	background-color: $Color-Accent-White
+	mask-image: url(../../assets/Token/Box.svg)
+	//&:hover
+	//	background-color: $Color-Accent-White-20
+	//	+transition
+	+Flex-Content-Center
+	+Breakpoint-Mobile
+		width: 50px
+		height: 50px
+	> svg
+		width: 36px
+		height: auto
+		+Breakpoint-Mobile
+			width: 25px
+	> svg path
+		fill: $Color-Accent-White
+
+.Wrapper-Texts-Feature
+	text-align: left
+	display: grid
+	grid-auto-flow: row
+	row-gap: 16px
+	+Breakpoint-Tablet
+		text-align: center
+
+.Title-Feature
+	+Text-Style-Title
+	+Breakpoint-Mobile
+		+Text-Style-Title-Small
+
+.Description-Feature
+	+Text-Style-Body
+	color: $Color-Gray-60
+	+Breakpoint-Tablet
+		margin: 0 auto
+		max-width: 180px
+	+Breakpoint-Mobile
+		+Text-Style-Body-Small

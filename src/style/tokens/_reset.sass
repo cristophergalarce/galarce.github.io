@@ -1,4 +1,6 @@
 @use 'animations' as *
+@use 'fonts' as *
+@use 'breakpoints' as *
 
 //	==========================================================================
 	3. General - Setting up some base styles
@@ -22,3 +24,12 @@ button
 	box-sizing: content-box
 	&:focus
 		outline: none
+h1
+	+Text-Style-H1
+
+h2
+	+Text-Style-H2
+
+h3
+	margin: 0
+	+Text-Style-Title

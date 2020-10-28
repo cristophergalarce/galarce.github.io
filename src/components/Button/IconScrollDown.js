@@ -6,7 +6,7 @@ class IconScrollDown extends Component {
 		return (
 			<div className='Icon-Scroll-Down'>
 				<figure className='Molecule-Button-Icon-Box'>
-					<a href={"#Skill"} rel='noopener noreferrer'>
+					<a href={"#Discover"} rel='noopener noreferrer'>
 						<IconLineChevronDownBig />
 					</a>
 				</figure>
